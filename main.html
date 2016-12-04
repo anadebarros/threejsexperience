@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=utf-8>
+    <title>My first Three.js app</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+
+<body>
+    <input type="checkbox" id="sidebartoggler">
+    <div class="page-wrap">
+        <label for="sidebartoggler" class="toggle">☰</label>
+        <div class="page-content"></div>
+        <div class="sidebar">
+            <ul>
+                <a href="index.html">
+                    <li>Home</li>
+                </a>
+                <a href="about-me.html">
+                    <li>About Me</li>
+                </a>
+                <a href="my-work.html">
+                    <li>My Work</li>
+                </a>
+            </ul>
+        </div>
+    </div>
+
+    <script src="js/three.js"></script>
+    <script>
+        var scene = new THREE.Scene();
+
+        var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+
+
+        var renderer = new THREE.WebGLRenderer();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement);
+
+
+        var geometry = new THREE.BoxGeometry(2, 2, 2);
+
+        var material = new THREE.MeshBasicMaterial({
+            color: 0x33FFCC
+        });
+        var cube = new THREE.Mesh(geometry, material);
+        scene.add(cube);
+        color: 0x33FFCC
+
+        camera.position.z = 7;
+
+        var render = function() {
+            requestAnimationFrame(render);
+
+            cube.rotation.x += 0.02;
+            cube.rotation.y += 0.02;
+
+            renderer.render(scene, camera);
+        };
+
+        render();
+    </script>
+    </div>
+</body>
+
+</html>
