@@ -4,6 +4,7 @@ body {
     height: 100%;
 }
 
+/*nav bar*/
 .toggle {
     position: fixed;
     transition: all 0.8s;
@@ -82,10 +83,11 @@ body {
     left: 600px;
 }
 
-#sidebartoggler:checked+.page-wrap .page-content .ball-container {
+#sidebartoggler:checked+.page-wrap .page-content{
     padding-left: 50px;
 }
 
+/*crazy jumpin random balls*/
 .ball-container{
   width:100px;
   height:100px;
@@ -118,3 +120,55 @@ div.c{
   background-color:tomato;
   position:absolute;
 }
+
+/*three circles rotating*/
+.rgb-wrap{
+  position:relative;
+}
+
+p{
+			width:50px;
+			height:50px;
+			border-radius:50%;
+			text-align:center;
+			color:white;
+			font-size:20px;
+			text-transform:uppercase;
+			line-height: 2;
+			font-weight: bold;
+			margin:0;
+			font-family: "georgia";
+			position:absolute;
+		}
+
+		.red{
+			background-color:rgba(255,99,71,0.5);
+			left:78%;
+      bottom:-200px;
+      transform: rotate(-10deg);
+		  animation: spin 7s linear infinite;
+		}
+
+		.green{
+			background-color:rgba(0, 255, 204,0.5);
+			left:75%;
+			bottom:-200px;
+      transform: rotate(15deg);
+		  animation: spin 7s linear reverse infinite;
+	}
+
+		.blue{
+			background-color:rgba(255,255,255,0.5);
+      bottom: -175px;
+      left: 913px;
+      transform: rotate(32deg);
+	  	animation: spin 7s linear infinite;
+		}
+
+	@-moz-keyframes spin {
+		100% { -moz-transform: rotate(360deg); }
+	}
+
+	@keyframes spin {
+		100% { transform:rotate(360deg); }
+	}
