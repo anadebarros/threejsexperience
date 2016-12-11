@@ -11,23 +11,34 @@
     <input type="checkbox" id="sidebartoggler">
     <div class="page-wrap">
         <label for="sidebartoggler" class="toggle">☰</label>
-        <div class="page-content"></div>
+        <div class="page-content">
+        </div>
         <div class="sidebar">
             <ul>
-                <a href="index.html">
+                <div class="ball-container">
+                    <div class='a' name="animate"></div>
+                    <div class='b' name="animate"></div>
+                    <div class='c' name="animate"></div>
+                </div>
+                <a href="#">
                     <li>Home</li>
                 </a>
-                <a href="about-me.html">
+                <a href="#">
                     <li>About Me</li>
                 </a>
-                <a href="my-work.html">
+                <a href="#">
                     <li>My Work</li>
                 </a>
+
             </ul>
+
         </div>
+
     </div>
 
     <script src="js/three.js"></script>
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <script src="js/main.js"></script>
     <script>
         var scene = new THREE.Scene();
 

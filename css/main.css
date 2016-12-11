@@ -30,7 +30,7 @@ body {
     z-index: 0;
     top: 0px;
     right: 0;
-    left: -150px;
+    left: -550px;
     bottom: 0px;
     width: 100px;
     padding: 20px;
@@ -79,9 +79,42 @@ body {
 }
 
 #sidebartoggler:checked+.page-wrap .toggle {
-    left: 150px;
+    left: 600px;
 }
 
-#sidebartoggler:checked+.page-wrap .page-content {
+#sidebartoggler:checked+.page-wrap .page-content .ball-container {
     padding-left: 50px;
+}
+
+.ball-container{
+  width:100px;
+  height:100px;
+  position:relative;
+}
+
+div.a{
+  width:20px;
+  height:20px;
+  border-radius:50%;
+  background-color:tomato;
+  position:absolute;
+  right: 0;
+  left: -550px;
+  bottom: 0px;
+}
+
+div.b{
+  width:20px;
+  height:20px;
+  border-radius:50%;
+  background-color:tomato;
+  position:absolute;
+}
+
+div.c{
+  width:20px;
+  height:20px;
+  border-radius:50%;
+  background-color:tomato;
+  position:absolute;
 }
